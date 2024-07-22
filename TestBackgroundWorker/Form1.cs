@@ -10,12 +10,12 @@ namespace TestBackgroundWorker
             labelProgress.Text = $"Not Started";
         }
 
-        private void bgWkrTestProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        private void OnBgWkrTestProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
         {
             labelProgress.Text = $"Progress: {e.ProgressPercentage.ToString()}% completed";
         }
 
-        private void bgWkrTestRunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void OnBgWkrTestRunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled == true)
             {

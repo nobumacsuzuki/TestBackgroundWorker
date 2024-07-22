@@ -73,8 +73,8 @@ namespace TestBackgroundWorker
             {
                 demandingWork.DoWork(sender, e);
             };
-            backgroundWorkerTest.ProgressChanged += bgWkrTestProgressChanged;
-            backgroundWorkerTest.RunWorkerCompleted += bgWkrTestRunWorkerCompleted;
+            backgroundWorkerTest.ProgressChanged += OnBgWkrTestProgressChanged;
+            backgroundWorkerTest.RunWorkerCompleted += OnBgWkrTestRunWorkerCompleted;
             // 
             // Form1
             // 
